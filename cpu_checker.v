@@ -74,7 +74,7 @@ module cpu_checker(
 
 				else if (char == "^")
 				begin
-					state <= 4'h1;
+					state <= state;
 					type <= 2'b00;//重新复位
 					count <= 3'b000;//这个也要重新复位
 					
@@ -144,12 +144,14 @@ module cpu_checker(
 				begin
 					state <= state + 4'h1;
 					type <= type + 2'b01;
+					count <= 3'b000;
 				end
 				
 				else if (char == "*")//处理bug:之前为state
 				begin
 					state <= state + 4'h1;
 					type <= type + 2'b10;
+					count <= 3'b000;
 				end
 				
 				else if (char == "^")
@@ -193,6 +195,13 @@ module cpu_checker(
 						count <= 3'b000;
 						state <= state + 4'h2;//跳两步
 					end
+					
+					else if (char == "^")
+					begin
+						state <= 4'h1;
+						type <= 2'b00;//重新复位
+						count <= 3'b000;
+					end
 								
 					else
 					begin
@@ -217,6 +226,13 @@ module cpu_checker(
 						state <= state + 4'h1;
 						count <= 3'b000;
 					end
+					
+					else if (char == "^")
+					begin
+						state <= 4'h1;
+						type <= 2'b00;//重新复位
+						count <= 3'b000;
+					end
 
 					else
 					begin
@@ -227,16 +243,11 @@ module cpu_checker(
 				
 				end
 				
-				else if (char == "^")
-				begin
-					state <= 4'h1;
-					type <= 2'b00;//重新复位
-				end
-				
 				else
 				begin
 					state <= 4'h0;
 					type <= 2'b00;//复位
+					count <= 3'b000;
 				end
 				
 			end
