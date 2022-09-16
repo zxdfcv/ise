@@ -47,7 +47,7 @@ module cpu_checker(
 				if (char == "^")
 				begin
 					state <= state + 4'h1;
-					count <= 3'b001;//下面进入数字输入
+					count <= 3'b000;//下面进入数字输入
 				end
 				
 				else 

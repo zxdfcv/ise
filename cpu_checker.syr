@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: cpu_checker.prj
 
@@ -212,13 +212,11 @@ Optimizing unit <cpu_checker> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block cpu_checker, actual ratio is 5.
-FlipFlop count_0 has been replicated 2 time(s)
-FlipFlop count_1 has been replicated 1 time(s)
-FlipFlop count_2 has been replicated 3 time(s)
-FlipFlop state_0 has been replicated 2 time(s)
-FlipFlop state_1 has been replicated 2 time(s)
+FlipFlop count_0 has been replicated 1 time(s)
+FlipFlop count_2 has been replicated 2 time(s)
+FlipFlop state_0 has been replicated 1 time(s)
+FlipFlop state_1 has been replicated 1 time(s)
 FlipFlop state_2 has been replicated 1 time(s)
-FlipFlop state_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -226,8 +224,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 21
- Flip-Flops                                            : 21
+# Registers                                            : 15
+ Flip-Flops                                            : 15
 
 =========================================================================
 
@@ -250,16 +248,16 @@ Top Level Output File Name         : cpu_checker.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 112
+# BELS                             : 108
 #      LUT2                        : 3
-#      LUT3                        : 8
+#      LUT3                        : 9
 #      LUT4                        : 9
-#      LUT5                        : 27
-#      LUT6                        : 59
-#      MUXF7                       : 6
-# FlipFlops/Latches                : 21
-#      FDR                         : 10
-#      FDRE                        : 11
+#      LUT5                        : 22
+#      LUT6                        : 60
+#      MUXF7                       : 5
+# FlipFlops/Latches                : 15
+#      FDR                         : 7
+#      FDRE                        : 8
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 11
@@ -273,15 +271,15 @@ Selected Device : xa6slx4csg225-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              21  out of   4800     0%  
- Number of Slice LUTs:                  106  out of   2400     4%  
-    Number used as Logic:               106  out of   2400     4%  
+ Number of Slice Registers:              15  out of   4800     0%  
+ Number of Slice LUTs:                  103  out of   2400     4%  
+    Number used as Logic:               103  out of   2400     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    115
-   Number with an unused Flip Flop:      94  out of    115    81%  
-   Number with an unused LUT:             9  out of    115     7%  
-   Number of fully used LUT-FF pairs:    12  out of    115    10%  
+ Number of LUT Flip Flop pairs used:    108
+   Number with an unused Flip Flop:      93  out of    108    86%  
+   Number with an unused LUT:             5  out of    108     4%  
+   Number of fully used LUT-FF pairs:    10  out of    108     9%  
    Number of unique control sets:         3
 
 IO Utilization: 
@@ -312,7 +310,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 21    |
+clk                                | BUFGP                  | 15    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -323,9 +321,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.085ns (Maximum Frequency: 196.639MHz)
-   Minimum input arrival time before clock: 9.325ns
-   Maximum output required time after clock: 5.627ns
+   Minimum period: 5.406ns (Maximum Frequency: 184.990MHz)
+   Minimum input arrival time before clock: 9.392ns
+   Maximum output required time after clock: 5.655ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -334,35 +332,35 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.085ns (frequency: 196.639MHz)
-  Total number of paths / destination ports: 1019 / 32
+  Clock period: 5.406ns (frequency: 184.990MHz)
+  Total number of paths / destination ports: 668 / 23
 -------------------------------------------------------------------------
-Delay:               5.085ns (Levels of Logic = 5)
-  Source:            count_1_1 (FF)
+Delay:               5.406ns (Levels of Logic = 5)
+  Source:            count_1 (FF)
   Destination:       state_2 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: count_1_1 to state_2
+  Data Path: count_1 to state_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.447   0.845  count_1_1 (count_1_1)
-     LUT4:I1->O            3   0.205   0.755  char[7]_GND_1_o_AND_16_o1 (char[7]_GND_1_o_AND_16_o)
-     LUT6:I4->O            3   0.203   0.755  Mmux_GND_1_o_GND_1_o_mux_113_OUT621 (Mmux_GND_1_o_GND_1_o_mux_113_OUT62)
-     LUT6:I4->O            1   0.203   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62_SW0 (N29)
+     FDRE:C->Q            19   0.447   1.176  count_1 (count_1)
+     LUT4:I2->O            6   0.203   0.745  char[7]_GND_1_o_AND_15_o1 (char[7]_GND_1_o_AND_15_o)
+     LUT6:I5->O            3   0.205   0.755  Mmux_GND_1_o_GND_1_o_mux_113_OUT621 (Mmux_GND_1_o_GND_1_o_mux_113_OUT62)
+     LUT6:I4->O            1   0.203   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62_SW0 (N35)
      LUT6:I5->O            1   0.205   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62 (Mmux_GND_1_o_state[3]_mux_209_OUT_62)
      LUT6:I5->O            2   0.205   0.000  state<3>21 (GND_1_o_state[3]_mux_209_OUT<2>)
      FDR:D                     0.102          state_2
     ----------------------------------------
-    Total                      5.085ns (1.570ns logic, 3.515ns route)
-                                       (30.9% logic, 69.1% route)
+    Total                      5.406ns (1.570ns logic, 3.836ns route)
+                                       (29.0% logic, 71.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 3125 / 53
+  Total number of paths / destination ports: 2082 / 38
 -------------------------------------------------------------------------
-Offset:              9.325ns (Levels of Logic = 8)
+Offset:              9.392ns (Levels of Logic = 8)
   Source:            char<7> (PAD)
   Destination:       state_2 (FF)
   Destination Clock: clk rising
@@ -372,23 +370,23 @@ Offset:              9.325ns (Levels of Logic = 8)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             7   1.222   1.002  char_7_IBUF (char_7_IBUF)
-     LUT3:I0->O           11   0.205   1.227  GND_1_o_char[7]_AND_28_o21 (GND_1_o_char[7]_AND_28_o2)
-     LUT5:I0->O           13   0.203   0.933  GND_1_o_char[7]_AND_28_o1 (GND_1_o_char[7]_AND_28_o)
-     LUT6:I5->O           16   0.205   1.369  GND_1_o_GND_1_o_OR_20_o (GND_1_o_GND_1_o_OR_20_o)
+     LUT3:I0->O           10   0.205   1.201  GND_1_o_char[7]_AND_28_o21 (GND_1_o_char[7]_AND_28_o2)
+     LUT5:I0->O           18   0.203   1.050  GND_1_o_char[7]_AND_28_o1 (GND_1_o_char[7]_AND_28_o)
+     LUT6:I5->O           15   0.205   1.346  GND_1_o_GND_1_o_OR_20_o (GND_1_o_GND_1_o_OR_20_o)
      LUT6:I0->O            3   0.203   0.879  GND_1_o_state[3]_mux_105_OUT<2>1 (GND_1_o_state[3]_mux_105_OUT<2>)
-     LUT6:I3->O            1   0.205   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62_SW0 (N29)
+     LUT6:I3->O            1   0.205   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62_SW0 (N35)
      LUT6:I5->O            1   0.205   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62 (Mmux_GND_1_o_state[3]_mux_209_OUT_62)
      LUT6:I5->O            2   0.205   0.000  state<3>21 (GND_1_o_state[3]_mux_209_OUT<2>)
      FDR:D                     0.102          state_2
     ----------------------------------------
-    Total                      9.325ns (2.755ns logic, 6.570ns route)
-                                       (29.5% logic, 70.5% route)
+    Total                      9.392ns (2.755ns logic, 6.637ns route)
+                                       (29.3% logic, 70.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 12 / 2
 -------------------------------------------------------------------------
-Offset:              5.627ns (Levels of Logic = 2)
+Offset:              5.655ns (Levels of Logic = 2)
   Source:            state_0 (FF)
   Destination:       format_type<1> (PAD)
   Source Clock:      clk rising
@@ -397,12 +395,12 @@ Offset:              5.627ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             44   0.447   1.827  state_0 (state_0)
+     FDR:C->Q             46   0.447   1.855  state_0 (state_0)
      LUT6:I0->O            1   0.203   0.579  Mmux_format_type21 (format_type_1_OBUF)
      OBUF:I->O                 2.571          format_type_1_OBUF (format_type<1>)
     ----------------------------------------
-    Total                      5.627ns (3.221ns logic, 2.406ns route)
-                                       (57.2% logic, 42.8% route)
+    Total                      5.655ns (3.221ns logic, 2.434ns route)
+                                       (57.0% logic, 43.0% route)
 
 =========================================================================
 
@@ -414,14 +412,14 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.085|         |         |         |
+clk            |    5.406|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.66 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.60 secs
  
 --> 
 

@@ -945,7 +945,7 @@ LAB30:    xsi_set_current_line(49, ng0);
     t57 = (t0 + 1928);
     xsi_vlogvar_wait_assign_value(t57, t56, 0, 0, 4, 0LL);
     xsi_set_current_line(50, ng0);
-    t2 = ((char*)((ng1)));
+    t2 = ((char*)((ng2)));
     t3 = (t0 + 2248);
     xsi_vlogvar_wait_assign_value(t3, t2, 0, 0, 3, 0LL);
     goto LAB29;
