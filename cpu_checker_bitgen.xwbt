@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\10791\cpu_checker\cpu_checker.ncd
+OUTFILE=C:\Users\10791\cpu_checker\cpu_checker.bit
+FAMILY=Automotive Spartan6
+PART=xa6slx4-3csg225
+WORKINGDIR=C:\Users\10791\cpu_checker
+LICENSE=WebPack
+USER_INFO=212523127_0_0_037
