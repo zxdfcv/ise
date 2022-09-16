@@ -77,6 +77,7 @@ module cpu_checker(
 					state <= 4'h1;
 					type <= 2'b00;//重新复位
 					count <= 3'b000;//这个也要重新复位
+					
 				end
 				
 				else
@@ -305,6 +306,7 @@ module cpu_checker(
 				begin
 					state <= 4'h1;
 					type <= 2'b00;//重新复位
+					count <= 3'b000;
 				end
 				
 				else
@@ -334,6 +336,7 @@ module cpu_checker(
 				begin
 					state <= 4'h1;
 					type <= 2'b00;//重新复位
+					count <= 3'b000;//重新复位
 				end
 				
 				else
@@ -344,7 +347,7 @@ module cpu_checker(
 				end			
 			end
 
-			else if (state == 4'ha)//state 10 输入结束符
+			else if (state == 4'ha)//state 10 输入结束符 "#"
 			begin
 				
 				if (char == "#")
@@ -362,8 +365,6 @@ module cpu_checker(
 				begin
 					state <= 4'h0;
 				end
-				
-						//暂时不用考虑不到最后一步就出现"^"的情况
 			
 			end
 			
