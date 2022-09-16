@@ -123,28 +123,29 @@ Synthesizing Unit <cpu_checker>.
     Found 2-bit register for signal <type>.
     Found 3-bit register for signal <count>.
     Found 4-bit register for signal <state>.
-    Found 2-bit adder for signal <type[1]_GND_1_o_add_52_OUT> created at line 146.
-    Found 2-bit adder for signal <type[1]_PWR_1_o_add_55_OUT> created at line 152.
-    Found 4-bit adder for signal <state[3]_GND_1_o_add_79_OUT> created at line 194.
-    Found 3-bit adder for signal <count[2]_GND_1_o_add_153_OUT> created at line 325.
-    Found 4-bit adder for signal <state[3]_GND_1_o_add_169_OUT> created at line 355.
-    Found 4-bit 4-to-1 multiplexer for signal <GND_1_o_GND_1_o_mux_113_OUT> created at line 206.
-    Found 2-bit 4-to-1 multiplexer for signal <GND_1_o_GND_1_o_mux_114_OUT> created at line 206.
+    Found 2-bit adder for signal <type[1]_GND_1_o_add_49_OUT> created at line 150.
+    Found 2-bit adder for signal <type[1]_PWR_1_o_add_52_OUT> created at line 157.
+    Found 4-bit adder for signal <state[3]_GND_1_o_add_79_OUT> created at line 200.
+    Found 3-bit adder for signal <count[2]_GND_1_o_add_155_OUT> created at line 340.
+    Found 4-bit adder for signal <state[3]_GND_1_o_add_171_OUT> created at line 370.
+    Found 3-bit 4-to-1 multiplexer for signal <GND_1_o_GND_1_o_mux_114_OUT> created at line 219.
+    Found 4-bit 4-to-1 multiplexer for signal <GND_1_o_GND_1_o_mux_115_OUT> created at line 219.
+    Found 2-bit 4-to-1 multiplexer for signal <GND_1_o_GND_1_o_mux_116_OUT> created at line 219.
     Found 4-bit 13-to-1 multiplexer for signal <GND_1_o_state[3]_mux_209_OUT> created at line 60.
-    Found 3-bit comparator lessequal for signal <n0005> created at line 63
-    Found 3-bit comparator lessequal for signal <n0010> created at line 69
-    Found 3-bit comparator lessequal for signal <n0035> created at line 173
-    Found 3-bit comparator lessequal for signal <n0041> created at line 191
-    Found 3-bit comparator greater for signal <count[2]_PWR_1_o_LessThan_153_o> created at line 323
-    Found 8-bit comparator lessequal for signal <n0085> created at line 329
-    Found 8-bit comparator lessequal for signal <n0087> created at line 329
-    Found 8-bit comparator lessequal for signal <n0090> created at line 329
-    Found 8-bit comparator lessequal for signal <n0092> created at line 329
+    Found 3-bit comparator lessequal for signal <n0006> created at line 63
+    Found 3-bit comparator lessequal for signal <n0011> created at line 69
+    Found 3-bit comparator lessequal for signal <n0037> created at line 179
+    Found 3-bit comparator lessequal for signal <n0043> created at line 197
+    Found 3-bit comparator greater for signal <count[2]_PWR_1_o_LessThan_155_o> created at line 338
+    Found 8-bit comparator lessequal for signal <n0085> created at line 344
+    Found 8-bit comparator lessequal for signal <n0087> created at line 344
+    Found 8-bit comparator lessequal for signal <n0090> created at line 344
+    Found 8-bit comparator lessequal for signal <n0092> created at line 344
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred   9 D-type flip-flop(s).
 	inferred   9 Comparator(s).
-	inferred  48 Multiplexer(s).
+	inferred  47 Multiplexer(s).
 Unit <cpu_checker> synthesized.
 
 =========================================================================
@@ -163,12 +164,13 @@ Macro Statistics
  3-bit comparator greater                              : 1
  3-bit comparator lessequal                            : 4
  8-bit comparator lessequal                            : 4
-# Multiplexers                                         : 48
- 2-bit 2-to-1 multiplexer                              : 15
+# Multiplexers                                         : 47
+ 2-bit 2-to-1 multiplexer                              : 14
  2-bit 4-to-1 multiplexer                              : 1
  3-bit 2-to-1 multiplexer                              : 9
+ 3-bit 4-to-1 multiplexer                              : 1
  4-bit 13-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 21
+ 4-bit 2-to-1 multiplexer                              : 20
  4-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -193,12 +195,13 @@ Macro Statistics
  3-bit comparator greater                              : 1
  3-bit comparator lessequal                            : 4
  8-bit comparator lessequal                            : 4
-# Multiplexers                                         : 48
- 2-bit 2-to-1 multiplexer                              : 15
+# Multiplexers                                         : 47
+ 2-bit 2-to-1 multiplexer                              : 14
  2-bit 4-to-1 multiplexer                              : 1
  3-bit 2-to-1 multiplexer                              : 9
+ 3-bit 4-to-1 multiplexer                              : 1
  4-bit 13-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 21
+ 4-bit 2-to-1 multiplexer                              : 20
  4-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -212,11 +215,11 @@ Optimizing unit <cpu_checker> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block cpu_checker, actual ratio is 5.
-FlipFlop count_0 has been replicated 1 time(s)
-FlipFlop count_2 has been replicated 2 time(s)
+FlipFlop count_2 has been replicated 1 time(s)
 FlipFlop state_0 has been replicated 1 time(s)
 FlipFlop state_1 has been replicated 1 time(s)
 FlipFlop state_2 has been replicated 1 time(s)
+FlipFlop state_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -224,8 +227,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 15
- Flip-Flops                                            : 15
+# Registers                                            : 14
+ Flip-Flops                                            : 14
 
 =========================================================================
 
@@ -248,16 +251,17 @@ Top Level Output File Name         : cpu_checker.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 108
-#      LUT2                        : 3
-#      LUT3                        : 9
-#      LUT4                        : 9
-#      LUT5                        : 22
-#      LUT6                        : 60
-#      MUXF7                       : 5
-# FlipFlops/Latches                : 15
-#      FDR                         : 7
-#      FDRE                        : 8
+# BELS                             : 114
+#      GND                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 8
+#      LUT4                        : 8
+#      LUT5                        : 24
+#      LUT6                        : 63
+#      MUXF7                       : 8
+# FlipFlops/Latches                : 14
+#      FDR                         : 8
+#      FDRE                        : 6
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 11
@@ -271,15 +275,15 @@ Selected Device : xa6slx4csg225-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              15  out of   4800     0%  
- Number of Slice LUTs:                  103  out of   2400     4%  
-    Number used as Logic:               103  out of   2400     4%  
+ Number of Slice Registers:              14  out of   4800     0%  
+ Number of Slice LUTs:                  105  out of   2400     4%  
+    Number used as Logic:               105  out of   2400     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    108
-   Number with an unused Flip Flop:      93  out of    108    86%  
-   Number with an unused LUT:             5  out of    108     4%  
-   Number of fully used LUT-FF pairs:    10  out of    108     9%  
+ Number of LUT Flip Flop pairs used:    109
+   Number with an unused Flip Flop:      95  out of    109    87%  
+   Number with an unused LUT:             4  out of    109     3%  
+   Number of fully used LUT-FF pairs:    10  out of    109     9%  
    Number of unique control sets:         3
 
 IO Utilization: 
@@ -310,7 +314,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 15    |
+clk                                | BUFGP                  | 14    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -321,9 +325,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.406ns (Maximum Frequency: 184.990MHz)
-   Minimum input arrival time before clock: 9.392ns
-   Maximum output required time after clock: 5.655ns
+   Minimum period: 5.524ns (Maximum Frequency: 181.027MHz)
+   Minimum input arrival time before clock: 9.302ns
+   Maximum output required time after clock: 5.669ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -332,61 +336,61 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.406ns (frequency: 184.990MHz)
-  Total number of paths / destination ports: 668 / 23
+  Clock period: 5.524ns (frequency: 181.027MHz)
+  Total number of paths / destination ports: 842 / 20
 -------------------------------------------------------------------------
-Delay:               5.406ns (Levels of Logic = 5)
+Delay:               5.524ns (Levels of Logic = 5)
   Source:            count_1 (FF)
-  Destination:       state_2 (FF)
+  Destination:       state_3 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: count_1 to state_2
+  Data Path: count_1 to state_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            19   0.447   1.176  count_1 (count_1)
-     LUT4:I2->O            6   0.203   0.745  char[7]_GND_1_o_AND_15_o1 (char[7]_GND_1_o_AND_15_o)
-     LUT6:I5->O            3   0.205   0.755  Mmux_GND_1_o_GND_1_o_mux_113_OUT621 (Mmux_GND_1_o_GND_1_o_mux_113_OUT62)
-     LUT6:I4->O            1   0.203   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62_SW0 (N35)
-     LUT6:I5->O            1   0.205   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62 (Mmux_GND_1_o_state[3]_mux_209_OUT_62)
-     LUT6:I5->O            2   0.205   0.000  state<3>21 (GND_1_o_state[3]_mux_209_OUT<2>)
-     FDR:D                     0.102          state_2
+     FDRE:C->Q            16   0.447   1.233  count_1 (count_1)
+     LUT6:I3->O            7   0.205   0.878  char[7]_GND_1_o_AND_16_o1 (char[7]_GND_1_o_AND_16_o)
+     LUT3:I1->O            1   0.203   0.684  Mmux_GND_1_o_GND_1_o_mux_115_OUT84_SW1 (N23)
+     LUT6:I4->O            1   0.203   0.580  Mmux_GND_1_o_GND_1_o_mux_115_OUT84 (GND_1_o_GND_1_o_mux_115_OUT<3>)
+     LUT6:I5->O            1   0.205   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_63 (Mmux_GND_1_o_state[3]_mux_209_OUT_63)
+     LUT5:I4->O            2   0.205   0.000  state<3>3 (GND_1_o_state[3]_mux_209_OUT<3>)
+     FDR:D                     0.102          state_3
     ----------------------------------------
-    Total                      5.406ns (1.570ns logic, 3.836ns route)
-                                       (29.0% logic, 71.0% route)
+    Total                      5.524ns (1.570ns logic, 3.954ns route)
+                                       (28.4% logic, 71.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 2082 / 38
+  Total number of paths / destination ports: 2624 / 34
 -------------------------------------------------------------------------
-Offset:              9.392ns (Levels of Logic = 8)
+Offset:              9.302ns (Levels of Logic = 8)
   Source:            char<7> (PAD)
-  Destination:       state_2 (FF)
+  Destination:       state_3 (FF)
   Destination Clock: clk rising
 
-  Data Path: char<7> to state_2
+  Data Path: char<7> to state_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             7   1.222   1.002  char_7_IBUF (char_7_IBUF)
-     LUT3:I0->O           10   0.205   1.201  GND_1_o_char[7]_AND_28_o21 (GND_1_o_char[7]_AND_28_o2)
-     LUT5:I0->O           18   0.203   1.050  GND_1_o_char[7]_AND_28_o1 (GND_1_o_char[7]_AND_28_o)
-     LUT6:I5->O           15   0.205   1.346  GND_1_o_GND_1_o_OR_20_o (GND_1_o_GND_1_o_OR_20_o)
-     LUT6:I0->O            3   0.203   0.879  GND_1_o_state[3]_mux_105_OUT<2>1 (GND_1_o_state[3]_mux_105_OUT<2>)
-     LUT6:I3->O            1   0.205   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62_SW0 (N35)
-     LUT6:I5->O            1   0.205   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_62 (Mmux_GND_1_o_state[3]_mux_209_OUT_62)
-     LUT6:I5->O            2   0.205   0.000  state<3>21 (GND_1_o_state[3]_mux_209_OUT<2>)
-     FDR:D                     0.102          state_2
+     LUT3:I0->O           15   0.205   1.326  GND_1_o_char[7]_AND_28_o21 (GND_1_o_char[7]_AND_28_o2)
+     LUT5:I0->O           11   0.203   0.883  GND_1_o_char[7]_AND_28_o1 (GND_1_o_char[7]_AND_28_o)
+     LUT6:I5->O           13   0.205   1.297  GND_1_o_GND_1_o_OR_20_o (GND_1_o_GND_1_o_OR_20_o)
+     LUT6:I0->O            3   0.203   0.879  Mmux_GND_1_o_state[3]_mux_167_OUT41 (GND_1_o_state[3]_mux_167_OUT<3>)
+     LUT6:I3->O            1   0.205   0.580  Mmux_GND_1_o_GND_1_o_mux_115_OUT84 (GND_1_o_GND_1_o_mux_115_OUT<3>)
+     LUT6:I5->O            1   0.205   0.580  Mmux_GND_1_o_state[3]_mux_209_OUT_63 (Mmux_GND_1_o_state[3]_mux_209_OUT_63)
+     LUT5:I4->O            2   0.205   0.000  state<3>3 (GND_1_o_state[3]_mux_209_OUT<3>)
+     FDR:D                     0.102          state_3
     ----------------------------------------
-    Total                      9.392ns (2.755ns logic, 6.637ns route)
-                                       (29.3% logic, 70.7% route)
+    Total                      9.302ns (2.755ns logic, 6.547ns route)
+                                       (29.6% logic, 70.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 12 / 2
 -------------------------------------------------------------------------
-Offset:              5.655ns (Levels of Logic = 2)
+Offset:              5.669ns (Levels of Logic = 2)
   Source:            state_0 (FF)
   Destination:       format_type<1> (PAD)
   Source Clock:      clk rising
@@ -395,12 +399,12 @@ Offset:              5.655ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             46   0.447   1.855  state_0 (state_0)
+     FDR:C->Q             47   0.447   1.869  state_0 (state_0)
      LUT6:I0->O            1   0.203   0.579  Mmux_format_type21 (format_type_1_OBUF)
      OBUF:I->O                 2.571          format_type_1_OBUF (format_type<1>)
     ----------------------------------------
-    Total                      5.655ns (3.221ns logic, 2.434ns route)
-                                       (57.0% logic, 43.0% route)
+    Total                      5.669ns (3.221ns logic, 2.448ns route)
+                                       (56.8% logic, 43.2% route)
 
 =========================================================================
 
@@ -412,14 +416,14 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.406|         |         |         |
+clk            |    5.524|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.60 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.53 secs
  
 --> 
 
