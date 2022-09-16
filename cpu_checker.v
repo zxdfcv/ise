@@ -65,29 +65,18 @@ module cpu_checker(
 					count <= count + 3'b001;
 					state <= state;
 				end
-					
-				//else if (char >= "0" && char <= "9" && count == 3'b011)//数位达到4个
-				//begin
-					//count <= count + 3'b001;
-					//state  <= state + 4'h1;//状态转移
-				//end
-					
+				
 				else if (char == "@" && count >=  3'b001 && count <= 3'b100)//这样写似乎有些问题 //后面不再是数字且数字后面是空格
 				begin
 					count <= 3'b000;
 					state <= state + 4'h1;//跳一步
 				end
 
-				
-				
-				//else if (char == "^")
-				//begin 
-				//	state <= state;//注意是保持这个状态
-				//end
 				else if (char == "^")
 				begin
 					state <= 4'h1;
 					type <= 2'b00;//重新复位
+					count <= 3'b000;//这个也要重新复位
 				end
 				
 				else
@@ -97,22 +86,6 @@ module cpu_checker(
 				end
 				
 			end 
-			
-			//else if(state == 4'h2)
-			//begin
-			
-				//if (char == "@")
-				//begin
-					//state <= state + 4'h1;
-					//count <= 3'b000;//使用之前要初始化
-				//end
-				
-				//else
-				//begin
-					//state <= 4'h0;
-				//end
-			
-			//end
 			
 			else if (state == 4'h2)
 			begin
